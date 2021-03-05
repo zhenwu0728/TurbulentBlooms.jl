@@ -59,7 +59,7 @@ initial_temperature(x, y, z) = (20 + ∂T∂z * z + ∂T∂z * grid.Lz * 1e-4 * 
 
 set!(model, T = initial_temperature,)
 
-wizard = TimeStepWizard(cfl=0.2, Δt=1.0, max_change=1.1, max_Δt=20.0)
+wizard = TimeStepWizard(cfl=0.2, Δt=1.0, max_change=1.1, max_Δt=10.0)
 
 simulation = Simulation(model, iteration_interval = 1, stop_time=86400, Δt = wizard)
 
